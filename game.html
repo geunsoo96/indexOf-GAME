@@ -9,7 +9,7 @@
 <body>
     <div id="root"></div>
     <input type="text" id="input">
-    <button id="btn">indexOf</button>
+    <button id="btn">filter</button>
     <div id="result"></div>
     <script>
         const root = document.getElementById("root")
@@ -22,13 +22,13 @@
 
         function randomArr(arr){
             for(let i =0; i < 9; i++){
-                let random = Math.floor(Math.random()* 10)
+                let random = Math.floor(Math.random()* 20)
                 randomA.push(random)
             }
             return randomA
         }
         button.addEventListener("click", ()=>{
-            result.innerHTML =  randomA.indexOf(Number(input.value))
+            result.innerHTML =  randomA.filter((item)=> item < Number(input.value))
 
         })
     </script>
